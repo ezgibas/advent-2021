@@ -95,8 +95,8 @@ def find_unmarked(board):
 unmarked_list = find_unmarked(bingo_board)
 unmarked_sum = sum(map(int, unmarked_list))
 
-#print(unmarked_sum)
-#print(cur_num)
+print(unmarked_sum)
+print(cur_num)
 
 
 """PART 2"""
