@@ -36,7 +36,7 @@ def least_frequent(List):
 # takes in: two strings, one only one character, and an index
 # returns a boolean determining if the first character of the long string
 # is equal to the small string
-def first_digit_equal(binary_num, i, dig):
+def ith_digit_equal(binary_num, i, dig):
     return binary_num[i] == dig
 
 # takes in: a string
@@ -50,7 +50,7 @@ i = 0
 while len(filtered_nums) > 1:
     iths = list(map(lambda l: ith_digit(l, i), filtered_nums))
     most_freq = most_frequent(iths)
-    filtered_nums = [bin_num for bin_num in filtered_nums if first_digit_equal(bin_num, i, most_freq)]
+    filtered_nums = [bin_num for bin_num in filtered_nums if ith_digit_equal(bin_num, i, most_freq)]
     i += 1
 
 oxygen_generator = filtered_nums[0]
@@ -61,7 +61,7 @@ filtered_nums = inpt[:]
 while len(filtered_nums) > 1:
     iths = list(map(lambda l: ith_digit(l, i), filtered_nums))
     least_freq = least_frequent(iths)
-    filtered_nums = [bin_num for bin_num in filtered_nums if first_digit_equal(bin_num, i, least_freq)]
+    filtered_nums = [bin_num for bin_num in filtered_nums if ith_digit_equal(bin_num, i, least_freq)]
     i += 1
 
 co2_scrubber = filtered_nums[0]
